@@ -1,0 +1,42 @@
+server:
+  port: 10010
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  profiles: dev
+  http:
+    encoding:
+      charset: utf-8
+      enabled: utf-8
+      force: true
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://47.98.182.243/parking_pay?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: 123456
+      initial-size: 10
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: ucmed
+        login-password: ucmed@2018
+        allow: 127.0.0.1
+        deny:
+
+
+
+
+
