@@ -150,11 +150,11 @@
             <artifactId>poi-ooxml</artifactId>
             <version>3.17</version>
         </dependency>
-        <dependency>
-            <groupId>com.hundsun.jresplus</groupId>
-            <artifactId>jresplus-5ex</artifactId>
-            <version>1.0.1</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.hundsun.jresplus</groupId>-->
+            <!--<artifactId>jresplus-5ex</artifactId>-->
+            <!--<version>1.0.1</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.github.ltsopensource</groupId>
             <artifactId>lts</artifactId>
