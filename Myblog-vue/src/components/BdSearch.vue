@@ -2,7 +2,7 @@
   <div class="content">
 
 
-    <el-row style="width: 60% !important;margin: 0 auto !important;height: 665px;">
+    <el-row style="width: 80% !important;margin: 0 auto !important;">
       <h2 style="font-family: STLiti;margin: 20px;">MC搜一搜</h2>
       <el-col :span="24">
         <div class="grid-content bg-purple">
@@ -17,7 +17,7 @@
       <ul>
         <div class="li1">
           <li v-for="(item,index) in searchList" :key="index" :value="item.href">
-            <a :href="item.href" target="_blank">{{index+1}}、 {{item.title}}</a>
+            <a :href="item.href" target="_blank">{{index+1}}、 {{item.title | filterContent}}</a>
           </li>
         </div>
         <div class="li2" v-if="searchList.length>0">
@@ -42,6 +42,16 @@
     getBdSearchData
   } from '../api/bdrequest'
   export default {
+    filters: {
+      filterContent(inParams) {
+        if (inParams.length > 15) {
+          return inParams.substring(0, 16) + "..." + inParams.substring(inParams.length - 3, inParams.length);
+        } else {
+          return inParams;
+        }
+
+      }
+    },
     name: 'BdSearch',
     data() {
       return {
@@ -89,29 +99,23 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  body {
-    background-color: lightskyblue !important;
-  }
+
 
 </style>
-<style scoped>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
+<style>
   .content {
     width: 100%;
     height: 100%;
+    background: url(../../static/img/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   ul {
     list-style-type: none;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    /* background-color: darkkhaki; */
     margin-top: 50px;
-
+    height: 100%;
   }
 
   ul>.li1,

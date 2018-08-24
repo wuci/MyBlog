@@ -12,7 +12,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://47.98.182.243/parking_pay?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://47.98.182.243/myblog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
       username: root
       password: 123456
       initial-size: 10
