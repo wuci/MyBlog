@@ -2,6 +2,22 @@ server:
   port: 10010
   tomcat:
     uri-encoding: utf-8
+lts:
+  jobclient:
+    cluster-name: test_cluster
+    registry-address: zookeeper://47.98.182.243:2181
+    node-group: test_jobClient
+    use-retry-client: true
+    configs:
+      job.fail.store: mapdb
+  tasktracker:
+    cluster-name: test_cluster
+    registry-address: zookeeper://47.98.182.243:2181
+    node-group: test_jobTask
+    use-retry-client: true
+    configs:
+      job.fail.store: mapdb
+
 spring:
   profiles: dev
   http:
@@ -35,6 +51,23 @@ spring:
         login-password: ucmed@2018
         allow: 127.0.0.1
         deny:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -14,6 +14,8 @@
     <modules>
         <module>Myblog-Web</module>
         <module>Myblog</module>
+        <module>Myblog-lts</module>
+        <module>MyBlog-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -26,6 +28,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <skipTests>true</skipTests>
+        <lts.version>1.6.7.1</lts.version>
+        <mapdb.version>2.0-beta10</mapdb.version>
+        <zkclient.version>0.1</zkclient.version>
+        <log4j.version>1.2.16</log4j.version>
     </properties>
 
     <profiles>
@@ -151,9 +157,9 @@
             <version>3.17</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.hundsun.jresplus</groupId>-->
-            <!--<artifactId>jresplus-5ex</artifactId>-->
-            <!--<version>1.0.1</version>-->
+        <!--<groupId>com.hundsun.jresplus</groupId>-->
+        <!--<artifactId>jresplus-5ex</artifactId>-->
+        <!--<version>1.0.1</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>com.github.ltsopensource</groupId>
@@ -213,6 +219,63 @@
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.8.1</version>
+        </dependency>
+        <!--lts架包-->
+        <dependency>
+            <groupId>com.github.ltsopensource</groupId>
+            <artifactId>lts-jobclient</artifactId>
+            <version>${lts.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ltsopensource</groupId>
+            <artifactId>lts-tasktracker</artifactId>
+            <version>${lts.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ltsopensource</groupId>
+            <artifactId>lts-core</artifactId>
+            <version>${lts.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ltsopensource</groupId>
+            <artifactId>lts-spring</artifactId>
+            <version>${lts.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ltsopensource</groupId>
+            <artifactId>lts-monitor</artifactId>
+            <version>${lts.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.20.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport</artifactId>
+            <version>4.0.20.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fusesource.leveldbjni</groupId>
+            <artifactId>leveldbjni-all</artifactId>
+            <version>1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>mapdb</artifactId>
+            <version>${mapdb.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zkclient.version}</version>
+        </dependency>
+        <!--log4j-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
         </dependency>
     </dependencies>
 
