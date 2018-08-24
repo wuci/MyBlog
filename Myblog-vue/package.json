@@ -45,6 +45,7 @@
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
     "lib-flexible": "^0.3.2",
+    "mint-ui": "^2.2.13",
     "nightwatch": "^0.9.12",
     "node-notifier": "^5.1.2",
     "object-keys": "^1.0.12",

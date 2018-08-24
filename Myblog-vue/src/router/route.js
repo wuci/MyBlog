@@ -12,6 +12,7 @@ import Java from '@/components/blog/study/Java'
 import Javascript from '@/components/blog/study/Javascript'
 import SpringBoot from '@/components/blog/study/SpringBoot'
 import VuePage from '@/components/blog/study/VuePage'
+import MobileIndex from '@/components/MobileIndex'
 const route = [{
     path: '/',
     name: 'BdSearch',
@@ -25,7 +26,11 @@ const route = [{
     path: '/login',
     name: 'Login',
     component: Login
-  }, {
+  },{
+    path:'/mobile',
+    name: 'mobile',
+    component: MobileIndex
+  } ,{
     path: '/blog',
     name: 'BlogIndex',
     component: BlogIndex,
